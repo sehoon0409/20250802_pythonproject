@@ -62,3 +62,12 @@ list_example = [1, "+", 2, "="]
 
 print(list_example)
 print(list_example[0])
+
+#변할수 잇는 데이터는 key값으로 설정 불가
+dict_example = {
+    1: 'value 1' ,
+    # x: 'asdf'      # 변수는 사용 불가능
+    # [1,2] : 'asdf' # 리스트 도 사용 불가능
+}
+
+print(dict_example)
