@@ -1,4 +1,9 @@
 print("Hellow world")
 
-git config --global user.email "20090409ksh@gmail.com"
-  git config --global user.name "sehoon0409"
+# 사용자에게 입력받은 값을 바로 정수로 바꾸어 user_input 변수에 대입
+user_input = int(input("숫자를 입력하고 엔터를 누르세요:")) #int("1") -> 1
+print(user_input+5)
+
+# 사용자에게 입력받은 값을 user_input 변수에 대입해서 연산할 때 정수형으로 바꿔서 연산
+user_input = input("숫자를 입력하고 엔터를 누르세요:")
+print(int(user_input)+5)
