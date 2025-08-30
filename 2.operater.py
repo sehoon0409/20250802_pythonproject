@@ -25,6 +25,11 @@ print("x * y : " , z)
 z = x / y
 print("x / y : " , z)
 
+z = 5 + x * 3 #곱셈이 덧셈보다 연산순위가 더 높음
+print(" 5 + x * 3 :", z)
+z = (5 + x) * 3 #우선순위가 낮은 연산을 먼저 하고 싶으면 괄호로 묶어주기
+print(" (5 + x) * 3 :", z)
+
 z = x % y
 print("x % y : " , z)
 z = x // y
@@ -66,9 +71,9 @@ report_card = {
     "국어": 1,
     "수학": 3,
     "영어": 3,
-    "물리": 1,
+    "물리": 4,
     "화학": 2,
-    "생명과학": 1,
+    "생명과학": 5,
 }
 
 can_apply = report_card["국어"] <= 3 and  report_card["수학"] <= 3 and report_card["영어"] <= 3
@@ -81,3 +86,4 @@ print("3합 6 :" , total_score)
 #과학 영재반
 can_apply_class_for_the_gifted = report_card["물리"] ==1 or report_card["화학"] ==1 or report_card["생명과학"] ==1
 print("영재반 지원가능여부 :" , can_apply_class_for_the_gifted )
+
