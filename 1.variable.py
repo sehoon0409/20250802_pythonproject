@@ -24,10 +24,62 @@ print(type(x))
 x = [1,2,3,4,5,6,7] #list
 print(x)
 print(x[0])
+print(x[3])
+print(type(x))
+
+
+x =  x * 2
+print("x * 2 :" , x)
+
+x = [1,2,3,4,5,6,7]
+#sclicing
+print(x[2:5]) #[start_index : end_index+1]
+print("append======")
+x.append(8)
+print(x)
+print("insert=====")
+x.insert(1,9)
+print(x)
+print("remover========")
+x.remove(1) #인덱스가 아닌 값을 지우는 함수
+print(x)
+print("9->6")
+x[0] = 6
+print(x)
+
+#참조할 수 없는 인덱스 위치를 참조했을때 (배열길이 이상)
+# IndexError: list assignment index  put of range
+# x[7] = 1
+
+print("배열의 길이========")
+print(len(x))
+
+print("배열의 마지막 인덱스========")
+print(len(x) - 1)
 
 x = {'a':1, 'b':3} #dictionary  key:value
 print(x)
 print(x['a'])
+print(type(x))
+
+x['c'] = 10
+print(x)
+print(x['c'])
+#print(x['d']) # keyError: 'd'
+
+del x['a'] # 딕셔너리에서 특정 키값 지우기
+print(x)
+
+print(x.keys())
+print(x.values())
+print(x.items())
+
+print(x.clear()) # 딕셔너리 지우기
+
+
+
+
+
 #정오표
 example = {
     'python': [True, False, True, True, True, True, True, False, False, True],
