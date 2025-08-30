@@ -34,7 +34,7 @@ print("x * 2 :" , x)
 x = [1,2,3,4,5,6,7]
 #sclicing
 print(x[2:5]) #[start_index : end_index+1]
-print("apend======")
+print("append======")
 x.append(8)
 print(x)
 print("insert=====")
@@ -60,6 +60,26 @@ print(len(x) - 1)
 x = {'a':1, 'b':3} #dictionary  key:value
 print(x)
 print(x['a'])
+print(type(x))
+
+x['c'] = 10
+print(x)
+print(x['c'])
+#print(x['d']) # keyError: 'd'
+
+del x['a'] # 딕셔너리에서 특정 키값 지우기
+print(x)
+
+print(x.keys())
+print(x.values())
+print(x.items())
+
+print(x.clear()) # 딕셔너리 지우기
+
+
+
+
+
 #정오표
 example = {
     'python': [True, False, True, True, True, True, True, False, False, True],
