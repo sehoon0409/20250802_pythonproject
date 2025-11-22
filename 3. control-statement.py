@@ -63,25 +63,85 @@ for i in arr:
     print(i)
 
 #수학
-test = [{ 'answer1': [1,3,2,4,5,3,1,2,3,4]},
-{ 'answer2': [1,1,1,1,1,1,1,1,1,1]},
-{ 'answer3': [1,5,3,4,5,1,2,3,1,2]},
-{'answer4': [4,3,2,4,5,3,1,2,3,4]},
-{ 'answer5': [1,3,2,4,5,3,1,2,3,4]},
-{ 'answer6': [1,3,2,4,5,3,1,2,3,4]},]
+test = [
+    {
+        'name': 'aaa',
+        'number': 10101,
+        'math': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'korean': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'english': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'science': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+    },
+    {
+        'name': 'bbb',
+        'number': 10102,
+        'math': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'korean': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'english': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'science': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+    },
+    {
+        'name': 'ccc',
+        'number': 10103,
+        'math': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'korean': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'english': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'science': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+    },    {
+        'name': 'ddd',
+        'number': 10104,
+        'math': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'korean': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'english': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'science': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+    },
+    {
+        'name': 'eee',
+        'number': 10105,
+        'math': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'korean': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'english': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+        'science': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+    }
+]
 
-a =  [1,3,2,4,5,3,1,2,3,4]
-correct_answer = [1,3,2,4,5,3,1,2,3,4]
+correct_answer = {
+    'math':[1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+    'korean': [1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+    'english':[1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+    'science':[1, 3, 2, 4, 5, 3, 1, 2, 3, 4],
+}
 
-#학생 점수 구하기 한 문제당 10점 가정
+def get_score(student_answer, correct_answer):
+    # 학생 점수 구하기 한 문제당 10점 가정
 
-total_score = 0
-for (student, correct) in zip(a, correct_answer):
-    print(student, '/', correct)
-    if student == correct:
-        total_score += 10
+    total_score = 0
+    for (student, correct) in zip(student_answer, correct_answer):
+        if student == correct:
+            total_score += 10
+    return total_score
 
-print("총점수 :", total_score)
+
+
+for student in test:
+    if student["name"] == 'ccc' : #배열 반복해서 스킵하는 방법
+        continue
+
+
+    print("학생", student['name'], "==================")
+
+    #for 중첩
+    #student.keys(), (이름이거나, 학번인 경우) or (배열이 아닌 경우) continue
+
+    math_score = get_score(student['math'], correct_answer['math'])
+    korean_score = get_score(student['korean'], correct_answer['korean'])
+    english_score = get_score(student['english'], correct_answer['english'])
+    science_score = get_score(student['science'], correct_answer['science'])
+
+    print("수학점수:", math_score)
+    print("국어점수:", korean_score)
+    print("영어점수:", english_score)
+    print("과학점수:", science_score)
 
 
 
