@@ -62,6 +62,12 @@ arr = ['AA','BB','CC','DD']
 for i in arr:
     print(i)
 
+# score = 0
+# for i in range(len(a)):
+#     if a[i] == correct_answer[i]:
+#         score = score + 10
+# print(score)
+
 #수학
 test = [
     {
