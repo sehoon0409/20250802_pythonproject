@@ -28,29 +28,51 @@ import time
 
     #test
 def updown():
-    # random.randrange ( n, m )   n <= result < m
+# random.randrange ( n, m )   n <= result < m
     print("WELCOME TO UP DOWN")
     result = random.randrange(1, 100)
 
-    x = int(input("숫자를 입력하세요:"))
+    while True:
+        x = int(input("숫자를 입력하세요:"))
 
-    if x > result:
-        print("Up")
+        if x > result:
+            print("Down")
 
-    if x < result:
-        print("Down")
+        if x < result:
+            print("Up")
 
-    if x == result:
-        print("정답입니다.")
+        if x == result:
+            print("정답입니다.")
+            break
 
 
 def quiz():
     print("WELCOME TO QUIZ!")
 
+    word = { "apple" : "사과" ,
+               "banana" : "바나나" ,
+               "grape" : "포도" ,
+               "melon" : "멜론"}
+
+    score = 0
+    test_list = list(word.keys())
+
+    for i in range(10) :
+        test = random.randrange(test_list)
+        answer = word[test]
+
+
+
+
+
+
+
 def stop_watch():
     print("WELCOME TO UP STOPWATCH")
     # random 초를 제공하면 ex) 7초
     start = time.time()
+
+
 
 while True:
     print('''
