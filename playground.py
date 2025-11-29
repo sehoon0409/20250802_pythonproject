@@ -72,6 +72,14 @@ def stop_watch():
     # random 초를 제공하면 ex) 7초
     start = time.time()
 
+    input("c를 입력하시오:")
+
+    end = user_input(time.time() - start)
+
+    if 6.7 <= end - start <= 7.3:
+        print("성공입니다!")
+    else : print("다시 시도해 보세요")
+
 
 
 while True:
