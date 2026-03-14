@@ -61,7 +61,6 @@ while True :
         print(f"현재 무기 레벨: {weapon_level}")
 
     elif choice == "2":
-        print("f")
         boss_name = ['돌가죽 파수꾼',
                      '검은 송곳니 사냥꾼',
                      '붉은 그림자 군주',
@@ -73,6 +72,8 @@ while True :
                      '천벌의 파멸자',
                      '종말의 절대군주' ,
                      '우주멸망의 군림자']
+    boss_level = boss_name
+    print("현재 보스:", boss_name[boss_level])
 
 
 
