@@ -3,6 +3,7 @@ print("게임에 오신 것을 환영합니다!")
 import random
 weapon_level = 0
 boss_level = 0
+is_dragon_slayer = False
 #up : 강화 성공! 레벨이 +1 됩니다.
 #keep : 변화 없음. 현재 레벨을 유지합니다
 #down : 강화 실패. 레벨이 -1 됩니다.
@@ -22,6 +23,9 @@ upgrade_rates = [ { "up": 70, "keep": 30, "down": 0, "break": 0,},
                   { "up": 0, "keep": 100, "down": 0, "break": 0}]
 #무한 반복 구조 만들기 (반복문)
 while True :
+    if is_dragon_slayer : print("[드래곤 처치자] 전설의 용사님, 환영합니다!")
+
+
     print("1. 무기 강화")
     print("2. 보스 도전")
     print("0. 종료하기")
@@ -93,6 +97,7 @@ while True :
             win_rate = 100
         ran_num = (random.randint(0, 99))
 
+
         if ran_num < win_rate :
             print("보스 처치 성공!")
             boss_level +=1
@@ -100,10 +105,15 @@ while True :
             print("처참하게 패배했습니다...")
             boss_level +=0
 
+        is_dragon_slayer = False
+
         if boss_level==11:
             print('축하합니다! 모든 보스를 제압했습니다!')
-            is_dragon_slayer = 0
-            if is_dragon_slayer
+            is_dragon_slayer = True
+
+
+
+
 
 
 
