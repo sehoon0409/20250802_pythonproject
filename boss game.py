@@ -4,6 +4,11 @@ import random
 weapon_level = 0
 boss_level = 0
 is_dragon_slayer = False
+def show_status(is_dragon_slayer):
+    title = "[드래곤 처치자]" if is_dragon_slayer else "없음"
+    print(f"칭호: {title}")
+    print(f"현재 무기 레벨: {weapon_level}")
+    print(f"현재 보스 레벨: {boss_level}")
 #up : 강화 성공! 레벨이 +1 됩니다.
 #keep : 변화 없음. 현재 레벨을 유지합니다
 #down : 강화 실패. 레벨이 -1 됩니다.
@@ -23,8 +28,10 @@ upgrade_rates = [ { "up": 70, "keep": 30, "down": 0, "break": 0,},
                   { "up": 0, "keep": 100, "down": 0, "break": 0}]
 #무한 반복 구조 만들기 (반복문)
 while True :
+
     if is_dragon_slayer : print("[드래곤 처치자] 전설의 용사님, 환영합니다!")
 
+    show_status(is_dragon_slayer)
 
     print("1. 무기 강화")
     print("2. 보스 도전")
@@ -62,7 +69,6 @@ while True :
             if weapon_level < 10:
                 weapon_level = 0
         print(f"강화 시도 결과: [{result}]")
-        print(f"현재 무기 레벨: {weapon_level}")
 
     elif choice == "2":
         boss_names = ['돌가죽 파수꾼',
@@ -99,11 +105,13 @@ while True :
 
 
         if ran_num < win_rate :
-            print("보스 처치 성공!")
-            boss_level +=1
+            if boss_level < 10:
+                boss_level += 1
+                print("보스 처치 성공!")
         elif ran_num >= win_rate :
-            print("처참하게 패배했습니다...")
-            boss_level +=0
+            if boss_level < 10:
+               print("처참하게 패배했습니다...")
+               boss_level +=0
 
         is_dragon_slayer = False
 
