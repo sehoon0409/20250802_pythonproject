@@ -61,7 +61,7 @@ while True :
         print(f"현재 무기 레벨: {weapon_level}")
 
     elif choice == "2":
-        boss_name = ['돌가죽 파수꾼',
+        boss_names = ['돌가죽 파수꾼',
                      '검은 송곳니 사냥꾼',
                      '붉은 그림자 군주',
                      '광기의 전쟁인도자',
@@ -72,8 +72,38 @@ while True :
                      '천벌의 파멸자',
                      '종말의 절대군주' ,
                      '우주멸망의 군림자']
-    boss_level = boss_name
-    print("현재 보스:", boss_name[boss_level])
+
+        print("현재 보스:", boss_names[boss_level])
+
+        level_diff = weapon_level - boss_level
+
+        if level_diff <= -3:
+            win_rate = 0
+        elif level_diff == -2:
+            win_rate = 20
+        elif level_diff == -1:
+            win_rate = 30
+        elif level_diff == 0:
+            win_rate = 50
+        elif level_diff == 1:
+            win_rate = 70
+        elif level_diff == 2:
+            win_rate = 90
+        elif level_diff >= 3:
+            win_rate = 100
+        ran_num = (random.randint(0, 99))
+
+        if ran_num < win_rate :
+            print("보스 처치 성공!")
+            boss_level +=1
+        elif ran_num >= win_rate :
+            print("처참하게 패배했습니다...")
+            boss_level +=0
+
+        if boss_level==11:
+            print('축하합니다! 모든 보스를 제압했습니다!')
+            is_dragon_slayer = 0
+            if is_dragon_slayer
 
 
 
