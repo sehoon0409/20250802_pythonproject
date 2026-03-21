@@ -71,17 +71,17 @@ while True :
         print(f"강화 시도 결과: [{result}]")
 
     elif choice == "2":
-        boss_names = ['돌가죽 파수꾼',
-                     '검은 송곳니 사냥꾼',
-                     '붉은 그림자 군주',
-                     '광기의 전쟁인도자',
-                     '심연의 집행자',
-                     '멸망의 폭군',
-                     '지옥문 파괴자',
-                     '영겁의 재앙 군주',
-                     '천벌의 파멸자',
-                     '종말의 절대군주' ,
-                     '우주멸망의 군림자']
+        boss_names = ['거짓 종막의 연출가',
+                     '철혈의 패왕',
+                     '부유한 밤의 아버지',
+                     '구원의 마왕',
+                     '묵시록의 최후룡',
+                     '악마같은 불의 심판자',
+                     '심연의 흑염룡',
+                     '긴고아의 죄수',
+                     '형용할 수 없는 아득함',
+                     '은밀한 모략가' ,
+                     '가장 오래된 꿈']
 
         print("현재 보스:", boss_names[boss_level])
 
@@ -105,11 +105,11 @@ while True :
 
 
         if ran_num < win_rate :
-            if boss_level < 10:
+            if boss_level < 11:
                 boss_level += 1
                 print("보스 처치 성공!")
         elif ran_num >= win_rate :
-            if boss_level < 10:
+            if boss_level < 11:
                print("처참하게 패배했습니다...")
                boss_level +=0
 
